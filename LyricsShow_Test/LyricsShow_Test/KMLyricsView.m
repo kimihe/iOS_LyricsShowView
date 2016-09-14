@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Kimi. All rights reserved.
 //
 
-#define USE_DEBUG 1
+#define USE_DEBUG 0
 
 #import "KMLyricsView.h"
 
@@ -31,7 +31,7 @@
         [self drawLyricsView];
         
 #if USE_DEBUG
-        self.backgroundColor = [UIColor grayColor];
+        self.backgroundColor = [UIColor lightGrayColor];
 #else
         self.backgroundColor = [UIColor clearColor];
 #endif
@@ -145,7 +145,7 @@
 {
     CALayer *maskLayer = [CALayer layer];
     maskLayer.frame = CGRectMake(_selfBoundsX, _selfBoundsY, _selfBoundsWidth, _selfBoundsHeight);
-    maskLayer.position = _selfBoundsCenter;
+    maskLayer.position = CGPointMake(_selfBoundsCenter.x, _selfBoundsCenter.y+_selfBoundsHeight/4);
     maskLayer.contents = (__bridge id)image.CGImage;
     
     return maskLayer;
