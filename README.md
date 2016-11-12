@@ -1,2 +1,2 @@
 # iOS_LyricsShowView
-山寨QQ音乐歌词(imitate QQ music lyrics show)
+Realize easy music lyrics show(可进一步用于歌词秀).
